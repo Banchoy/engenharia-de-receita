@@ -25,7 +25,7 @@ const problems = [
 
 export default function Problem() {
     return (
-        <section id="problem" className="w-full py-48 px-6 relative overflow-hidden flex flex-col items-center">
+        <section id="problem" className="w-full py-80 px-6 relative overflow-hidden flex flex-col items-center">
             {/* Decorative Blur */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-[600px] bg-neon/2 opacity-[0.03] blur-[120px] pointer-events-none" />
 

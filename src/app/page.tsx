@@ -34,11 +34,11 @@ export default function Home() {
             </main>
 
             {/* Seção Final CTA de Alto Impacto */}
-            <section className="py-40 px-6 bg-zinc-950/60 border-t border-neon/10 relative overflow-hidden">
+            <section className="w-full py-64 px-6 bg-zinc-950/60 border-t border-neon/10 relative overflow-hidden flex flex-col items-center">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(222,255,154,0.05),transparent)] pointer-events-none" />
 
-                <div className="max-w-4xl mx-auto text-center space-y-16 relative">
-                    <div className="space-y-6">
+                <div className="w-full max-w-4xl flex flex-col items-center text-center space-y-16 relative">
+                    <div className="space-y-6 w-full flex flex-col items-center">
                         <h2 className="text-5xl md:text-8xl font-heading font-black leading-none text-white tracking-tighter">
                             DOMINE SEU <br /> <span className="text-neon neon-text">MERCADO</span>
                         </h2>
@@ -48,7 +48,7 @@ export default function Home() {
                         </p>
                     </div>
 
-                    <div className="flex flex-col items-center gap-10">
+                    <div className="flex flex-col items-center gap-10 w-full">
                         <WhatsAppButton variant="inline" className="scale-110 md:scale-125 shadow-neon-strong" />
                         <div className="flex flex-col items-center gap-2 opacity-40">
                             <p className="text-[10px] font-black uppercase tracking-[0.5em]">Engenharia de Receita Previsível</p>

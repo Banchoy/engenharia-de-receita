@@ -25,7 +25,7 @@ const pillars = [
 
 export default function Pillars() {
     return (
-        <section id="pillars" className="w-full py-48 px-6 bg-background relative overflow-hidden flex flex-col items-center">
+        <section id="pillars" className="w-full py-80 px-6 bg-background relative overflow-hidden flex flex-col items-center">
             {/* Accents - High end subtle gradients */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon/10 rounded-full blur-[200px] opacity-5 pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-neon/5 rounded-full blur-[150px] opacity-5 pointer-events-none" />
