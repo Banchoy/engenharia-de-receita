@@ -6,44 +6,60 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
     return (
-        <div className="relative bg-background">
-            {/* Header Fixo Contido */}
-            <header className="fixed top-0 w-full z-50 px-6 py-8 flex justify-center pointer-events-none">
-                <div className="max-w-4xl w-full flex justify-between items-center glass px-8 py-4 rounded-2xl border-white/5 pointer-events-auto shadow-2xl">
-                    <div className="text-lg font-heading font-black tracking-tighter uppercase">
-                        Engenharia<span className="text-neon">.</span>
+        <div className="relative bg-background selection:bg-neon selection:text-background">
+            {/* Header Fixo Premium Contido */}
+            <header className="fixed top-0 w-full z-50 px-6 pt-8 pb-4 flex justify-center pointer-events-none">
+                <div className="max-w-4xl w-full flex justify-between items-center glass px-10 py-5 rounded-3xl border-neon/10 pointer-events-auto shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                    <div className="text-xl font-heading font-black tracking-tighter uppercase group cursor-default">
+                        Engenharia<span className="text-neon group-hover:animate-pulse">.</span>
                     </div>
-                    <div className="hidden md:block">
-                        <WhatsAppButton variant="inline" className="px-6 py-3 text-[10px]" />
+                    <div className="hidden sm:block">
+                        <WhatsAppButton variant="header" />
+                    </div>
+                    <div className="sm:hidden">
+                        <WhatsAppButton variant="header" className="px-3" />
                     </div>
                 </div>
             </header>
 
-            {/* Seções em Blocos Centrados */}
-            <div className="space-y-0">
+            {/* Seções em Blocos Centrados com Ritmo Visual */}
+            <main className="relative">
                 <Hero />
-                <Problem />
-                <Pillars />
-                <CaseStudy />
-            </div>
 
-            {/* Seção Final CTA Contida */}
-            <section className="py-32 px-6 bg-zinc-950/40 border-t border-white/5">
-                <div className="max-w-4xl mx-auto text-center space-y-12">
-                    <h2 className="text-4xl md:text-6xl font-heading font-black leading-tight text-white mb-8">
-                        PRONTO PARA TER <br /> <span className="text-neon">PREVISIBILIDADE</span>?
-                    </h2>
-                    <div className="flex flex-col items-center gap-6">
-                        <WhatsAppButton variant="inline" className="scale-110" />
-                        <p className="text-[10px] text-zinc-600 uppercase tracking-[0.3em]">
-                            © 2026 Engenharia de Receita Previsível.
+                <div className="relative z-10">
+                    <Problem />
+                    <Pillars />
+                    <CaseStudy />
+                </div>
+            </main>
+
+            {/* Seção Final CTA de Alto Impacto */}
+            <section className="py-40 px-6 bg-zinc-950/60 border-t border-neon/10 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(222,255,154,0.05),transparent)] pointer-events-none" />
+
+                <div className="max-w-4xl mx-auto text-center space-y-16 relative">
+                    <div className="space-y-6">
+                        <h2 className="text-5xl md:text-8xl font-heading font-black leading-none text-white tracking-tighter">
+                            DOMINE SEU <br /> <span className="text-neon neon-text">MERCADO</span>
+                        </h2>
+                        <p className="text-zinc-500 text-lg md:text-xl max-w-xl mx-auto font-medium">
+                            A janela de oportunidade para implementar engenharia de receita
+                            antes dos seus concorrentes está fechando.
                         </p>
+                    </div>
+
+                    <div className="flex flex-col items-center gap-10">
+                        <WhatsAppButton variant="inline" className="scale-110 md:scale-125 shadow-neon-strong" />
+                        <div className="flex flex-col items-center gap-2 opacity-40">
+                            <p className="text-[10px] font-black uppercase tracking-[0.5em]">Engenharia de Receita Previsível</p>
+                            <p className="text-[9px] uppercase tracking-widest text-zinc-600">© 2026 • Todos os Direitos Reservados</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Botão Flutuante Discreto */}
-            <WhatsAppButton variant="fixed" className="bottom-6 right-6 md:bottom-10 md:right-10" />
+            {/* Botão Flutuante Diferenciado (Apenas Mobile/Discreto) */}
+            <WhatsAppButton variant="fixed" className="md:bottom-10 md:right-10" />
         </div>
     );
 }

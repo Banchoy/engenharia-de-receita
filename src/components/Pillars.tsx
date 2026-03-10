@@ -25,17 +25,19 @@ const pillars = [
 
 export default function Pillars() {
     return (
-        <section className="py-40 px-6 bg-background relative overflow-hidden">
-            {/* Accents */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[800px] bg-[radial-gradient(circle,rgba(222,255,154,0.02)_0%,transparent_70%)] pointer-events-none" />
+        <section className="py-48 px-6 bg-background relative overflow-hidden">
+            {/* Accents - High end subtle gradients */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon/10 rounded-full blur-[200px] opacity-10 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-neon/5 rounded-full blur-[150px] opacity-10 pointer-events-none" />
 
-            <div className="max-w-4xl mx-auto relative">
-                <div className="text-center mb-32 space-y-6">
-                    <h2 className="text-4xl md:text-6xl font-heading font-black leading-none">
-                        OS 3 PILARES DA <br /><span className="text-neon neon-text">ENGENHARIA</span>
+            <div className="max-w-4xl mx-auto relative z-10">
+                <div className="text-center mb-32 space-y-8">
+                    <h2 className="text-4xl md:text-7xl font-heading font-black leading-none text-white">
+                        A CIÊNCIA DA <br /><span className="text-neon neon-text">ENGENHARIA</span>
                     </h2>
-                    <p className="text-zinc-400 max-w-2xl mx-auto text-lg md:text-xl font-medium">
-                        Não é mágica, é processo. Desenvolvemos uma estrutura robusta para garantir que cada centímetro do seu funil trabalhe para o lucro.
+                    <p className="text-zinc-500 max-w-2xl mx-auto text-lg md:text-xl font-medium leading-relaxed">
+                        Desenvolvemos uma estrutura robusta para garantir que cada centímetro
+                        do seu funil de vendas trabalhe para o lucro máximo.
                     </p>
                 </div>
 
@@ -43,16 +45,16 @@ export default function Pillars() {
                     {pillars.map((pillar, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="text-center group relative p-8 rounded-3xl border border-neon/10 bg-zinc-950/50 hover:border-neon/40 transition-all duration-500 shadow-xl hover:shadow-neon/10"
+                            className="text-center group relative p-12 rounded-[3rem] border border-white/5 bg-zinc-950/40 hover:border-neon/30 transition-all duration-700 shadow-2xl hover:shadow-neon/5"
                         >
-                            <div className="w-20 h-20 bg-neon/10 border border-neon/30 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-neon group-hover:text-background transition-all duration-500 shadow-neon/20">
-                                <pillar.icon className="w-10 h-10" />
+                            <div className="w-24 h-24 bg-neon/5 border border-neon/10 rounded-full flex items-center justify-center mx-auto mb-10 group-hover:bg-neon group-hover:text-background transition-all duration-500 shadow-neon/10">
+                                <pillar.icon className="w-12 h-12" />
                             </div>
-                            <h3 className="text-xl font-heading font-bold mb-6 text-white uppercase tracking-tight">{pillar.title}</h3>
+                            <h3 className="text-xl font-heading font-black mb-6 text-white uppercase tracking-tighter">{pillar.title}</h3>
                             <p className="text-zinc-500 text-sm leading-relaxed font-medium">
                                 {pillar.description}
                             </p>
@@ -60,9 +62,12 @@ export default function Pillars() {
                     ))}
                 </div>
 
-                <div className="flex flex-col items-center gap-10 p-16 rounded-[3rem] glass border-neon/20 text-center shadow-neon/5">
-                    <h4 className="text-2xl md:text-3xl font-heading font-black max-w-md mx-auto leading-tight">QUER IMPLEMENTAR ESSA ENGENHARIA HOJE?</h4>
-                    <WhatsAppButton variant="inline" className="scale-110" />
+                <div className="flex flex-col items-center gap-12 p-20 rounded-[4rem] glass border-neon/10 text-center shadow-[0_40px_100px_rgba(0,0,0,0.8)] relative group">
+                    <div className="absolute inset-0 bg-neon/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 rounded-[4rem]" />
+                    <h4 className="text-3xl md:text-5xl font-heading font-black max-w-md mx-auto leading-tight text-white uppercase tracking-tighter relative z-10">
+                        QUER IMPLEMENTAR ISSO HOJE?
+                    </h4>
+                    <WhatsAppButton className="scale-110 relative z-10" />
                 </div>
             </div>
         </section>
