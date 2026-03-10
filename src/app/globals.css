@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 5, 5, 5;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #050505;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .neon-glow {
+    box-shadow: 0 0 15px rgba(222, 255, 154, 0.4);
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 8px rgba(222, 255, 154, 0.6);
+  }
+
+  .glass {
+    background: rgba(18, 18, 18, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(222, 255, 154, 0.1);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply uppercase tracking-tighter;
+  }
+}
