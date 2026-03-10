@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --foreground-rgb: 255, 255, 255;
@@ -18,7 +16,7 @@ body {
   .neon-glow {
     box-shadow: 0 0 15px rgba(222, 255, 154, 0.4);
   }
-  
+
   .neon-text {
     text-shadow: 0 0 8px rgba(222, 255, 154, 0.6);
   }
@@ -37,7 +35,13 @@ body {
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply uppercase tracking-tighter;
   }
 }
