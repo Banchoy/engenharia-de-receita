@@ -42,7 +42,7 @@ export default function Pillars() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-16 mb-40 w-full justify-items-center">
+                <div className="grid md:grid-cols-3 gap-16 mb-64 w-full justify-items-center">
                     {pillars.map((pillar, index) => (
                         <PillarCard key={index} pillar={pillar} index={index} />
                     ))}
