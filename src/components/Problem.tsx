@@ -25,11 +25,11 @@ const problems = [
 
 export default function Problem() {
     return (
-        <section className="py-48 px-6 relative overflow-hidden">
+        <section id="problem" className="w-full py-48 px-6 relative overflow-hidden flex flex-col items-center">
             {/* Decorative Blur */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[600px] bg-neon/2 opacity-[0.03] blur-[120px] pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-[600px] bg-neon/2 opacity-[0.03] blur-[120px] pointer-events-none" />
 
-            <div className="max-w-5xl mx-auto relative z-10">
+            <div className="w-full max-w-5xl relative z-10 flex flex-col items-center">
                 <div className="text-center mb-40 space-y-10">
                     <h2 className="text-4xl md:text-7xl font-heading font-black tracking-tight leading-none text-white">
                         O PROBLEMA DAS<br />

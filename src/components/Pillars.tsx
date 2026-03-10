@@ -25,12 +25,12 @@ const pillars = [
 
 export default function Pillars() {
     return (
-        <section className="py-48 px-6 bg-background relative overflow-hidden">
+        <section id="pillars" className="w-full py-48 px-6 bg-background relative overflow-hidden flex flex-col items-center">
             {/* Accents - High end subtle gradients */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon/10 rounded-full blur-[200px] opacity-10 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-neon/5 rounded-full blur-[150px] opacity-10 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon/10 rounded-full blur-[200px] opacity-5 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-neon/5 rounded-full blur-[150px] opacity-5 pointer-events-none" />
 
-            <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center">
+            <div className="w-full max-w-5xl relative z-10 flex flex-col items-center">
                 <div className="text-center mb-40 space-y-10 w-full flex flex-col items-center">
                     <h2 className="text-4xl md:text-7xl font-heading font-black leading-none text-white">
                         A CIÊNCIA DA <br /><span className="text-neon neon-text">ENGENHARIA</span>

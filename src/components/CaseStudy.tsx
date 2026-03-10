@@ -5,9 +5,9 @@ import WhatsAppButton from "./WhatsAppButton";
 
 export default function CaseStudy() {
     return (
-        <section className="py-48 px-6">
-            <div className="max-w-5xl mx-auto glass rounded-[4rem] border-neon/10 overflow-hidden flex flex-col md:flex-row items-stretch min-h-[700px] shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
-                <div className="p-14 md:p-24 md:w-3/5 space-y-14 flex flex-col justify-center items-center text-center relative z-10 w-full">
+        <section id="case-study" className="w-full py-48 px-6 flex flex-col items-center">
+            <div className="w-full max-w-5xl glass rounded-[4rem] border-neon/10 overflow-hidden flex flex-col md:flex-row items-stretch min-h-[700px] shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
+                <div className="p-14 md:p-24 md:w-3/5 space-y-14 flex flex-col justify-center items-center text-center relative z-10">
                     <div className="space-y-8 w-full">
                         <span className="text-neon font-bold text-[10px] uppercase tracking-[0.8em] block opacity-70">Case de Sucesso Digital</span>
                         <h2 className="text-5xl md:7xl lg:text-8xl font-heading font-black leading-none text-white tracking-tighter uppercase font-outline-2">

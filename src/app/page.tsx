@@ -23,10 +23,10 @@ export default function Home() {
             </header>
 
             {/* Seções em Blocos Centrados com Ritmo Visual */}
-            <main className="relative">
+            <main className="relative w-full overflow-x-hidden flex flex-col items-center">
                 <Hero />
 
-                <div className="relative z-10">
+                <div className="w-full relative z-10 flex flex-col items-center">
                     <Problem />
                     <Pillars />
                     <CaseStudy />
