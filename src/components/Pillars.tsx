@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Zap, Filter, TrendingUp } from "lucide-react";
 
 import WhatsAppButton from "./WhatsAppButton";
@@ -43,22 +44,7 @@ export default function Pillars() {
 
                 <div className="grid md:grid-cols-3 gap-16 mb-40 w-full justify-items-center">
                     {pillars.map((pillar, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="text-center group relative p-14 rounded-[3.5rem] border border-white/5 bg-zinc-950/40 hover:border-neon/30 transition-all duration-700 shadow-2xl hover:shadow-neon/5 flex flex-col items-center"
-                        >
-                            <div className="w-24 h-24 bg-neon/5 border border-neon/10 rounded-full flex items-center justify-center mb-10 group-hover:bg-neon group-hover:text-background transition-all duration-500 shadow-neon/10">
-                                <pillar.icon className="w-12 h-12" />
-                            </div>
-                            <h3 className="text-xl font-heading font-black mb-6 text-white uppercase tracking-tighter">{pillar.title}</h3>
-                            <p className="text-zinc-500 text-sm leading-relaxed font-medium">
-                                {pillar.description}
-                            </p>
-                        </motion.div>
+                        <PillarCard key={index} pillar={pillar} index={index} />
                     ))}
                 </div>
 
@@ -71,5 +57,45 @@ export default function Pillars() {
                 </div>
             </div>
         </section>
+    );
+}
+
+function PillarCard({ pillar, index }: { pillar: any; index: number }) {
+    const [isOpen, setIsOpen] = useState(false);
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            className="text-center group relative p-14 rounded-[3.5rem] border border-white/5 bg-zinc-950/40 hover:border-neon/30 transition-all duration-700 shadow-2xl hover:shadow-neon/10 flex flex-col items-center min-h-[450px] w-full"
+        >
+            <div className="w-24 h-24 bg-neon/10 border border-neon/30 rounded-full flex items-center justify-center mb-10 group-hover:bg-neon group-hover:text-background transition-all duration-500 shadow-[0_0_30px_rgba(222,255,154,0.3)]">
+                <pillar.icon className="w-12 h-12" />
+            </div>
+            <h3 className="text-2xl font-heading font-black mb-6 text-white uppercase tracking-tighter">{pillar.title}</h3>
+
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="mb-6 px-6 py-2 rounded-full border border-neon/30 text-neon text-[10px] font-black tracking-widest uppercase hover:bg-neon/10 transition-colors"
+            >
+                {isOpen ? "Fechar" : "Saber Detalhes"}
+            </button>
+
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden"
+                    >
+                        <p className="text-zinc-400 text-sm leading-relaxed font-medium pt-4 border-t border-neon/10">
+                            {pillar.description}
+                        </p>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </motion.div>
     );
 }

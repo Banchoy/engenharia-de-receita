@@ -40,7 +40,7 @@ export default function CaseStudy() {
                     <img
                         src="/iceberg.png"
                         alt="Análise Profunda de Receita"
-                        className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale brightness-75 contrast-150"
+                        className="absolute inset-0 w-full h-full object-cover opacity-60 brightness-110 contrast-125"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-background via-transparent to-transparent pointer-events-none" />
 

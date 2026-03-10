@@ -60,7 +60,7 @@ export default function Hero() {
                     <img
                         src="/dashboard.png"
                         alt="Visualização do Lucro"
-                        className="w-full h-auto opacity-50 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100 object-cover"
+                        className="w-full h-auto opacity-80 group-hover:opacity-100 transition-all duration-1000 scale-105 group-hover:scale-100 object-cover"
                     />
                 </div>
             </motion.div>
