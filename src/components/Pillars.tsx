@@ -9,17 +9,17 @@ const pillars = [
     {
         icon: Zap,
         title: "Atração Magnética",
-        description: "Posicionamento de autoridade que atrai os clientes que você quer atender, não os que sobraram."
+        description: "Criamos um posicionamento de autoridade inquestionável. Não buscamos apenas atenção, mas sim o interesse geuníno de quem já tem o problema que você resolve e possui capital para investir na solução."
     },
     {
         icon: Filter,
         title: "Filtro de Qualidade",
-        description: "Filtramos 90% dos curiosos antes mesmo de chegarem no seu time comercial."
+        description: "Nossa engenharia filtra 90% dos 'curiosos' antes do primeiro contato. O seu time comercial só gasta energia com leads que já passaram por um processo rigoroso de qualificação técnica e financeira."
     },
     {
         icon: TrendingUp,
         title: "Escala Lucrativa",
-        description: "Processo previsível para escalar o investimento mantendo a margem de lucro saudável."
+        description: "Transformamos o seu marketing em um centro de lucro previsível. Ajustamos cada métrica para permitir que o investimento cresça de forma sustentável, mantendo margens saudáveis e ROI constante."
     }
 ];
 
@@ -30,18 +30,18 @@ export default function Pillars() {
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon/10 rounded-full blur-[200px] opacity-10 pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-neon/5 rounded-full blur-[150px] opacity-10 pointer-events-none" />
 
-            <div className="max-w-4xl mx-auto relative z-10">
-                <div className="text-center mb-32 space-y-8">
+            <div className="max-w-5xl mx-auto relative z-10">
+                <div className="text-center mb-40 space-y-10">
                     <h2 className="text-4xl md:text-7xl font-heading font-black leading-none text-white">
                         A CIÊNCIA DA <br /><span className="text-neon neon-text">ENGENHARIA</span>
                     </h2>
-                    <p className="text-zinc-500 max-w-2xl mx-auto text-lg md:text-xl font-medium leading-relaxed">
-                        Desenvolvemos uma estrutura robusta para garantir que cada centímetro
-                        do seu funil de vendas trabalhe para o lucro máximo.
+                    <p className="text-zinc-500 max-w-3xl mx-auto text-lg md:text-2xl font-medium leading-relaxed">
+                        Desenvolvemos uma estrutura matemática para garantir que cada centímetro
+                        do seu funil de vendas funcione com a precisão de um relógio suíço, voltado para o lucro máximo.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-12 mb-32">
+                <div className="grid md:grid-cols-3 gap-16 mb-40">
                     {pillars.map((pillar, index) => (
                         <motion.div
                             key={index}
@@ -49,7 +49,7 @@ export default function Pillars() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="text-center group relative p-12 rounded-[3rem] border border-white/5 bg-zinc-950/40 hover:border-neon/30 transition-all duration-700 shadow-2xl hover:shadow-neon/5"
+                            className="text-center group relative p-14 rounded-[3.5rem] border border-white/5 bg-zinc-950/40 hover:border-neon/30 transition-all duration-700 shadow-2xl hover:shadow-neon/5"
                         >
                             <div className="w-24 h-24 bg-neon/5 border border-neon/10 rounded-full flex items-center justify-center mx-auto mb-10 group-hover:bg-neon group-hover:text-background transition-all duration-500 shadow-neon/10">
                                 <pillar.icon className="w-12 h-12" />
