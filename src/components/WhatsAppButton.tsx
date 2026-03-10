@@ -29,8 +29,9 @@ export default function WhatsAppButton({ className, variant = "fixed" }: WhatsAp
         } catch (err) {
             console.error("Falha na captura:", err);
         } finally {
+            const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5512981420453";
             const message = encodeURIComponent("Vim da apresentação e quero uma sessão estratégica.");
-            window.location.href = `https://wa.me/SEUNUMERO?text=${message}`;
+            window.location.href = `https://wa.me/${whatsappNumber}?text=${message}`;
         }
     };
 
