@@ -44,10 +44,31 @@ export default function CaseStudy() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-background via-transparent to-transparent pointer-events-none" />
 
-                    {/* Overlay Text Effect Centered for balance */}
-                    <div className="absolute bottom-10 right-10 flex flex-col items-end opacity-20 group md:right-1/2 md:translate-x-1/2 md:items-center">
-                        <span className="text-[60px] font-heading font-black leading-none text-white font-outline-1">399X</span>
-                        <span className="text-[10px] uppercase tracking-widest text-white">Engenharia Digital</span>
+                    {/* Overlay Labels em PT-BR com Posicionamento Refinado */}
+                    <div className="absolute inset-0 pointer-events-none p-10">
+                        {/* Parte Visível */}
+                        <div className="absolute top-[15%] right-10 text-right space-y-1">
+                            <span className="text-neon font-black text-[10px] uppercase tracking-widest block">Receita Visível</span>
+                            <span className="text-white/40 text-[9px] uppercase tracking-tighter block">10% do Potencial</span>
+                        </div>
+
+                        {/* Parte Profunda */}
+                        <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 text-center space-y-4 w-full">
+                            <div className="space-y-1">
+                                <span className="text-white font-black text-[60px] md:text-[80px] leading-none tracking-tighter block font-outline-1 opacity-20">399X</span>
+                                <span className="text-neon neon-text font-black text-[10px] uppercase tracking-[0.5em] block">Potencial Oculto</span>
+                            </div>
+                            <div className="pt-4 border-t border-white/5 max-w-[200px] mx-auto">
+                                <span className="text-zinc-500 text-[9px] uppercase tracking-widest block leading-relaxed">
+                                    Profundidade • Fundação • Escala
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* Título da Imagem */}
+                        <div className="absolute top-10 left-10 opacity-30">
+                            <span className="text-white font-black text-xs uppercase tracking-[0.3em]">Faturamento</span>
+                        </div>
                     </div>
                 </div>
             </div>
