@@ -45,23 +45,43 @@ export default function Problem() {
                     {problems.map((item, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.95 }}
+                            initial="initial"
+                            whileHover="hover"
+                            animate="initial"
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="p-14 rounded-[3rem] glass border-neon/10 hover:border-neon/40 transition-all duration-500 text-center relative group"
+                            className="p-14 rounded-[3rem] glass border-neon/10 hover:border-neon/40 transition-all duration-500 text-center relative group flex flex-col items-center justify-center min-h-[400px] cursor-default"
                         >
-                            <div className="flex justify-center mb-10">
-                                <div className="p-5 bg-neon/5 rounded-3xl border border-neon/10 group-hover:bg-neon group-hover:text-background transition-colors duration-500">
-                                    <item.icon className="w-10 h-10" />
+                            <div className="flex flex-col items-center justify-center space-y-8 w-full">
+                                <div className="p-6 bg-neon/5 rounded-3xl border border-neon/10 group-hover:bg-neon group-hover:text-background transition-all duration-500 shadow-neon/5">
+                                    <item.icon className="w-12 h-12" />
+                                </div>
+
+                                <h3 className="text-2xl font-heading font-black text-white tracking-tight uppercase">
+                                    {item.title}
+                                </h3>
+
+                                <motion.div
+                                    variants={{
+                                        initial: { height: 0, opacity: 0, marginTop: 0 },
+                                        hover: { height: "auto", opacity: 1, marginTop: 24 }
+                                    }}
+                                    className="overflow-hidden hidden md:block w-full"
+                                    transition={{ duration: 0.4, ease: "easeOut" }}
+                                >
+                                    <p className="text-zinc-500 leading-relaxed text-sm font-medium pt-4 border-t border-neon/10">
+                                        {item.description}
+                                    </p>
+                                </motion.div>
+
+                                {/* Fallback Mobile (sempre visível ou com toque) */}
+                                <div className="md:hidden">
+                                    <p className="text-zinc-500 leading-relaxed text-sm font-medium pt-4 border-t border-neon/10">
+                                        {item.description}
+                                    </p>
                                 </div>
                             </div>
-                            <h3 className="text-xl font-heading font-black mb-5 text-white tracking-tight uppercase">
-                                {item.title}
-                            </h3>
-                            <p className="text-zinc-500 leading-relaxed text-sm font-medium">
-                                {item.description}
-                            </p>
                         </motion.div>
                     ))}
                 </div>
