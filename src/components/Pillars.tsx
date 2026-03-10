@@ -42,13 +42,13 @@ export default function Pillars() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-16 mb-64 w-full justify-items-center">
+                <div className="grid md:grid-cols-3 gap-16 mb-96 w-full justify-items-center">
                     {pillars.map((pillar, index) => (
                         <PillarCard key={index} pillar={pillar} index={index} />
                     ))}
                 </div>
 
-                <div className="flex flex-col items-center gap-12 p-20 rounded-[4rem] glass border-neon/10 text-center shadow-[0_40px_100px_rgba(0,0,0,0.8)] relative group w-full max-w-4xl mx-auto">
+                <div className="flex flex-col items-center gap-12 p-20 rounded-[4rem] glass border-neon/10 text-center shadow-[0_40px_100px_rgba(0,0,0,0.8)] relative group w-full max-w-4xl mx-auto mb-64">
                     <div className="absolute inset-0 bg-neon/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 rounded-[4rem]" />
                     <h4 className="text-3xl md:text-5xl font-heading font-black max-w-md mx-auto leading-tight text-white uppercase tracking-tighter relative z-10">
                         QUER IMPLEMENTAR ISSO HOJE?
