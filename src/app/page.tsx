@@ -2,6 +2,11 @@ import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Pillars from "@/components/Pillars";
 import CaseStudy from "@/components/CaseStudy";
+import FAQ from "@/components/FAQ";
+import ROICalculator from "@/components/ROICalculator";
+import Anatomy from "@/components/Anatomy";
+import Timeline from "@/components/Timeline";
+import CreativeShowcase from "@/components/CreativeShowcase";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
@@ -28,8 +33,13 @@ export default function Home() {
 
                 <div className="w-full relative z-10 flex flex-col items-center">
                     <Problem />
+                    <Anatomy />
                     <Pillars />
+                    <ROICalculator />
                     <CaseStudy />
+                    <CreativeShowcase />
+                    <Timeline />
+                    <FAQ />
                 </div>
             </main>
 

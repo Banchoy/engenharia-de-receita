@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { MessageCircle } from "lucide-react";
+import { trackLeadEvent } from "@/lib/tracking";
 import { cn } from "@/lib/utils";
 
 interface WhatsAppButtonProps {
@@ -16,6 +17,17 @@ export default function WhatsAppButton({ className, variant = "inline" }: WhatsA
     const handleClick = async () => {
         setLoading(true);
         try {
+            // Track Event
+            await trackLeadEvent({
+                event_type: 'whatsapp_click',
+                metadata: {
+                    variant,
+                    device: /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop",
+                    url: window.location.href
+                }
+            });
+
+            // Legacy Lead Capture
             const { error } = await supabase.from("leads_capturados").insert([
                 {
                     utm_source: new URLSearchParams(window.location.search).get("utm_source") || "direct",
