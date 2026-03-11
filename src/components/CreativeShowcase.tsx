@@ -26,7 +26,7 @@ const creatives = [
 
 export default function CreativeShowcase() {
     return (
-        <section id="creatives" className="w-full py-40 px-6 flex flex-col items-center bg-zinc-950/20">
+        <section id="creatives" className="w-full py-32 px-6 flex flex-col items-center bg-zinc-950/20">
             <div className="w-full max-w-6xl relative z-10">
                 <div className="text-center mb-24 space-y-6">
                     <h2 className="text-4xl md:text-7xl font-heading font-black text-white tracking-tighter uppercase">
@@ -46,22 +46,22 @@ export default function CreativeShowcase() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative flex flex-col items-center"
+                            className="group relative flex flex-col items-center min-h-[450px] h-auto"
                         >
                             <div className={`w-full aspect-[4/5] rounded-[3.5rem] bg-gradient-to-br ${creative.color} to-transparent border border-white/5 flex items-center justify-center relative overflow-hidden transition-all duration-700 group-hover:border-neon/30`}>
                                 <div className="absolute inset-0 bg-zinc-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                 <PlayCircle className="w-16 h-16 text-white/20 group-hover:text-neon group-hover:scale-110 transition-all duration-500 relative z-10" />
 
                                 <div className="absolute top-8 right-8">
-                                    <span className="px-4 py-2 bg-zinc-950 border border-white/10 rounded-full text-[8px] font-black text-neon uppercase tracking-widest shadow-2xl">
+                                    <span className="px-5 py-2.5 bg-zinc-950 border border-neon/20 rounded-full text-[9px] font-black text-neon uppercase tracking-widest shadow-2xl relative z-20">
                                         {creative.tag}
                                     </span>
                                 </div>
                             </div>
 
-                            <div className="mt-8 text-center space-y-3">
-                                <h3 className="text-xl font-black text-white uppercase tracking-tight">{creative.title}</h3>
-                                <p className="text-zinc-500 text-sm font-medium leading-relaxed max-w-[250px]">
+                            <div className="mt-10 text-center space-y-4 px-4 w-full">
+                                <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight">{creative.title}</h3>
+                                <p className="text-zinc-500 text-sm md:text-base font-medium leading-relaxed max-w-[280px] mx-auto hyphens-auto">
                                     {creative.description}
                                 </p>
                             </div>

@@ -5,7 +5,7 @@ import { ShieldAlert, ShieldCheck, XCircle, CheckCircle2, Users, Target } from '
 
 export default function Anatomy() {
     return (
-        <section id="anatomy" className="w-full py-40 px-6 flex flex-col items-center bg-zinc-950/20">
+        <section id="anatomy" className="w-full py-32 px-6 flex flex-col items-center bg-zinc-950/20">
             <div className="w-full max-w-6xl relative z-10">
                 <div className="text-center mb-24 space-y-6">
                     <h2 className="text-4xl md:text-7xl font-heading font-black text-white tracking-tighter uppercase">

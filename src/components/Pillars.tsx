@@ -10,12 +10,12 @@ const pillars = [
     {
         icon: Zap,
         title: "Atração Magnética",
-        description: "Criamos um posicionamento de autoridade inquestionável. Não buscamos apenas atenção, mas sim o interesse geuníno de quem já tem o problema que você resolve e possui capital para investir na solução."
+        description: "Posicionamento de autoridade inquestionável para atrair o interesse genuíno de quem já tem o problema que você resolve e possui capital."
     },
     {
         icon: Filter,
         title: "Filtro de Qualidade",
-        description: "Nossa engenharia filtra 90% dos 'curiosos' antes do primeiro contato. O seu time comercial só gasta energia com leads que já passaram por um processo rigoroso de qualificação técnica e financeira."
+        description: "Filtramos 90% dos 'curiosos', garantindo que seu time comercial foque apenas em leads qualificados técnica e financeiramente."
     },
     {
         icon: TrendingUp,
@@ -26,7 +26,7 @@ const pillars = [
 
 export default function Pillars() {
     return (
-        <section id="pillars" className="w-full py-80 px-6 bg-background relative overflow-hidden flex flex-col items-center">
+        <section id="pillars" className="w-full py-32 px-6 bg-background relative overflow-hidden flex flex-col items-center">
             {/* Accents - High end subtle gradients */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon/10 rounded-full blur-[200px] opacity-5 pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-neon/5 rounded-full blur-[150px] opacity-5 pointer-events-none" />
@@ -42,7 +42,7 @@ export default function Pillars() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-16 mb-96 w-full justify-items-center">
+                <div className="grid md:grid-cols-3 gap-20 mb-96 w-full justify-items-center">
                     {pillars.map((pillar, index) => (
                         <PillarCard key={index} pillar={pillar} index={index} />
                     ))}
@@ -68,7 +68,7 @@ function PillarCard({ pillar, index }: { pillar: any; index: number }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="text-center group relative p-14 rounded-[3.5rem] border border-white/5 bg-zinc-950/40 hover:border-neon/30 transition-all duration-700 shadow-2xl hover:shadow-neon/10 flex flex-col items-center min-h-[450px] w-full"
+            className="text-center group relative p-14 rounded-[3.5rem] border border-white/5 bg-zinc-950/40 hover:border-neon/30 transition-all duration-700 shadow-2xl hover:shadow-neon/10 flex flex-col items-center min-h-[480px] h-auto w-full"
         >
             <div className="w-24 h-24 bg-neon/10 border border-neon/30 rounded-full flex items-center justify-center mb-10 group-hover:bg-neon group-hover:text-background transition-all duration-500 shadow-[0_0_30px_rgba(222,255,154,0.3)]">
                 <pillar.icon className="w-12 h-12" />
@@ -88,9 +88,9 @@ function PillarCard({ pillar, index }: { pillar: any; index: number }) {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden"
+                        className="overflow-hidden w-full"
                     >
-                        <p className="text-zinc-400 text-sm leading-relaxed font-medium pt-4 border-t border-neon/10">
+                        <p className="text-zinc-400 text-sm leading-relaxed font-medium pt-4 border-t border-neon/10 hyphens-auto">
                             {pillar.description}
                         </p>
                     </motion.div>

@@ -36,7 +36,7 @@ const steps = [
 
 export default function Timeline() {
     return (
-        <section id="timeline" className="w-full py-40 px-6 flex flex-col items-center overflow-hidden">
+        <section id="timeline" className="w-full py-32 px-6 flex flex-col items-center overflow-hidden">
             <div className="w-full max-w-5xl relative z-10 flex flex-col items-center">
                 <div className="text-center mb-32 space-y-4">
                     <span className="text-neon font-black text-[10px] uppercase tracking-[0.5em] block opacity-70">Caminho da Escala</span>
