@@ -71,14 +71,14 @@ export default function Problem() {
                                         className="overflow-hidden hidden md:block w-full"
                                         transition={{ duration: 0.4, ease: "easeOut" }}
                                     >
-                                        <p className="text-[#E5E7EB]/70 leading-[1.6] text-sm md:text-base font-medium pt-8 border-t border-white/5 hyphens-auto">
+                                        <p className="text-[#E5E7EB]/70 leading-[1.6] text-sm md:text-base font-medium pt-8 border-t border-white/5 break-words w-full">
                                             {item.description}
                                         </p>
                                     </motion.div>
 
                                     {/* Fallback Mobile (sempre visível) */}
                                     <div className="md:hidden w-full">
-                                        <p className="text-[#E5E7EB]/70 leading-[1.6] text-sm md:text-base font-medium pt-8 border-t border-white/5 hyphens-auto">
+                                        <p className="text-[#E5E7EB]/70 leading-[1.6] text-sm md:text-base font-medium pt-8 border-t border-white/5 break-words w-full">
                                             {item.description}
                                         </p>
                                     </div>

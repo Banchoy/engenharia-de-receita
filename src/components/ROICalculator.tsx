@@ -12,7 +12,7 @@ export default function ROICalculator() {
     const [results, setResults] = useState({ revenue: 0, roas: 0, leads: 0 });
 
     useEffect(() => {
-        const leads = Math.floor(investment / 5); // Estimativa real: R$ 5 por lead qualificado (baseado em 1000/200)
+        const leads = Math.floor(investment / 7); // Média ajustada: R$ 7 por lead qualificado
         const sales = Math.floor(leads * (conversion / 100));
         const revenue = sales * ticket;
         const roas = revenue / investment;

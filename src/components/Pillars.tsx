@@ -82,7 +82,7 @@ function PillarCard({ pillar, index }: { pillar: any; index: number }) {
             <div className="flex-1 flex flex-col items-center w-full">
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="mb-8 px-8 py-3 rounded-full border border-neon/30 text-neon text-[10px] font-black tracking-widest uppercase hover:bg-neon/10 transition-colors shrink-0"
+                    className="mb-10 px-10 py-4 rounded-full border border-neon/30 text-neon text-[10px] font-black tracking-widest uppercase hover:bg-neon/10 transition-colors shrink-0"
                 >
                     {isOpen ? "Fechar" : "Saber Detalhes"}
                 </button>
@@ -95,7 +95,7 @@ function PillarCard({ pillar, index }: { pillar: any; index: number }) {
                             exit={{ height: 0, opacity: 0 }}
                             className="overflow-hidden w-full"
                         >
-                            <p className="text-[#E5E7EB]/70 text-sm md:text-base leading-[1.6] font-medium pt-6 border-t border-neon/10 hyphens-auto">
+                            <p className="text-[#E5E7EB]/70 text-sm md:text-base leading-[1.6] font-medium pt-8 border-t border-neon/10 break-words w-full">
                                 {pillar.description}
                             </p>
                         </motion.div>

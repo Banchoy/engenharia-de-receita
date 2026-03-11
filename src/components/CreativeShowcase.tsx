@@ -59,9 +59,9 @@ export default function CreativeShowcase() {
                                 </div>
                             </div>
 
-                            <div className="mt-10 text-center space-y-4 px-4 w-full">
+                            <div className="mt-12 text-center space-y-6 px-6 w-full">
                                 <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-tight">{creative.title}</h3>
-                                <p className="text-[#E5E7EB]/70 text-sm md:text-base font-medium leading-[1.6] max-w-[280px] mx-auto hyphens-auto">
+                                <p className="text-[#E5E7EB]/70 text-sm md:text-base font-medium leading-[1.6] max-w-[300px] mx-auto break-words w-full">
                                     {creative.description}
                                 </p>
                             </div>
