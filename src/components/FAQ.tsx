@@ -64,7 +64,7 @@ export default function FAQ() {
                                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                                     >
                                         <div className="px-8 pb-8">
-                                            <p className="text-zinc-500 text-lg leading-relaxed font-medium">
+                                            <p className="text-[#E5E7EB]/70 text-lg leading-[1.6] font-medium">
                                                 {faq.answer}
                                             </p>
                                         </div>

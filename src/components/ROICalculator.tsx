@@ -38,7 +38,7 @@ export default function ROICalculator() {
                     <h2 className="text-4xl md:text-6xl font-heading font-black text-white tracking-tighter uppercase">
                         SIMULE SUA <span className="text-neon neon-text">ESCALA Profissional</span>
                     </h2>
-                    <p className="text-zinc-500 max-w-2xl mx-auto text-lg font-medium">
+                    <p className="text-[#E5E7EB]/80 max-w-2xl mx-auto text-lg font-medium leading-[1.6]">
                         Insira seus números abaixo e veja o potencial represado da sua operação
                         com a Engenharia de Receita Previsível.
                     </p>
@@ -48,7 +48,7 @@ export default function ROICalculator() {
                     {/* Painel de Inputs */}
                     <div className="glass p-10 md:p-14 rounded-[3rem] border-white/5 space-y-10">
                         <div className="space-y-6">
-                            <label className="flex items-center gap-3 text-white font-black text-xs uppercase tracking-widest opacity-60">
+                            <label className="flex items-center gap-3 text-white font-black text-xs uppercase tracking-widest opacity-80">
                                 <DollarSign className="w-4 h-4 text-neon" /> Investimento Mensal
                             </label>
                             <input
@@ -58,13 +58,13 @@ export default function ROICalculator() {
                                 className="w-full h-2 bg-zinc-900 rounded-lg appearance-none cursor-pointer accent-neon"
                             />
                             <div className="flex justify-between items-center bg-zinc-950/60 p-4 rounded-2xl border border-white/5">
-                                <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest">Valor:</span>
+                                <span className="text-[#E5E7EB]/40 text-xs font-bold uppercase tracking-widest">Valor:</span>
                                 <span className="text-neon font-black text-2xl tracking-tighter">R$ {investment.toLocaleString()}</span>
                             </div>
                         </div>
 
                         <div className="space-y-6">
-                            <label className="flex items-center gap-3 text-white font-black text-xs uppercase tracking-widest opacity-60">
+                            <label className="flex items-center gap-3 text-white font-black text-xs uppercase tracking-widest opacity-80">
                                 <Target className="w-4 h-4 text-neon" /> Ticket Médio Produto
                             </label>
                             <input
@@ -74,13 +74,13 @@ export default function ROICalculator() {
                                 className="w-full h-2 bg-zinc-900 rounded-lg appearance-none cursor-pointer accent-neon"
                             />
                             <div className="flex justify-between items-center bg-zinc-950/60 p-4 rounded-2xl border border-white/5">
-                                <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest">Valor:</span>
+                                <span className="text-[#E5E7EB]/40 text-xs font-bold uppercase tracking-widest">Valor:</span>
                                 <span className="text-white font-black text-2xl tracking-tighter">R$ {ticket.toLocaleString()}</span>
                             </div>
                         </div>
 
                         <div className="space-y-6">
-                            <label className="flex items-center gap-3 text-white font-black text-xs uppercase tracking-widest opacity-60">
+                            <label className="flex items-center gap-3 text-white font-black text-xs uppercase tracking-widest opacity-80">
                                 <TrendingUp className="w-4 h-4 text-neon" /> Taxa de Conversão Est.
                             </label>
                             <input
@@ -90,7 +90,7 @@ export default function ROICalculator() {
                                 className="w-full h-2 bg-zinc-900 rounded-lg appearance-none cursor-pointer accent-neon"
                             />
                             <div className="flex justify-between items-center bg-zinc-950/60 p-4 rounded-2xl border border-white/5">
-                                <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest">Percentual:</span>
+                                <span className="text-[#E5E7EB]/40 text-xs font-bold uppercase tracking-widest">Percentual:</span>
                                 <span className="text-white font-black text-2xl tracking-tighter">{conversion}%</span>
                             </div>
                         </div>
@@ -98,15 +98,15 @@ export default function ROICalculator() {
 
                     {/* Painel de Resultados */}
                     <div className="bg-neon p-1 md:p-2 rounded-[3.5rem] shadow-[0_0_80px_rgba(222,255,154,0.15)]">
-                        <div className="bg-zinc-950 h-full w-full rounded-[3.2rem] p-10 md:p-14 flex flex-col justify-between">
+                        <div className="bg-zinc-950 h-full w-full rounded-[3.2rem] p-10 md:p-14 flex flex-col justify-between min-h-[500px]">
                             <div className="space-y-10">
-                                <div className="space-y-2">
-                                    <p className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-600">Faturamento Projetado</p>
+                                <div className="space-y-3">
+                                    <p className="text-[10px] font-black uppercase tracking-[0.4em] text-[#E5E7EB]/40">Faturamento Projetado</p>
                                     <motion.p
                                         key={results.revenue}
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
-                                        className="text-5xl md:text-7xl font-heading font-black text-white tracking-tighter"
+                                        className="text-5xl md:text-7xl font-heading font-black text-white tracking-tighter leading-none"
                                     >
                                         R$ {results.revenue.toLocaleString()}
                                     </motion.p>
@@ -114,18 +114,18 @@ export default function ROICalculator() {
 
                                 <div className="grid grid-cols-2 gap-8 border-t border-white/5 pt-10">
                                     <div className="space-y-1">
-                                        <p className="text-[9px] font-black uppercase tracking-widest text-zinc-600">ROI/ROAS Esperado</p>
-                                        <p className="text-3xl font-heading font-black text-neon">{results.roas.toFixed(1)}x</p>
+                                        <p className="text-[9px] font-black uppercase tracking-widest text-[#E5E7EB]/40">ROI/ROAS Esperado</p>
+                                        <p className="text-3xl font-heading font-black text-neon leading-tight">{results.roas.toFixed(1)}x</p>
                                     </div>
                                     <div className="space-y-1">
-                                        <p className="text-[9px] font-black uppercase tracking-widest text-zinc-600">Leads Qualificados</p>
-                                        <p className="text-3xl font-heading font-black text-white">{results.leads}</p>
+                                        <p className="text-[9px] font-black uppercase tracking-widest text-[#E5E7EB]/40">Leads Qualificados</p>
+                                        <p className="text-3xl font-heading font-black text-white leading-tight">{results.leads}</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="pt-14 space-y-6">
-                                <p className="text-zinc-500 text-sm font-medium leading-relaxed">
+                            <div className="pt-14 space-y-8">
+                                <p className="text-[#E5E7EB]/50 text-xs md:text-sm font-medium leading-[1.6]">
                                     *Estes números são baseados em benchmarks de operações que utilizam nossa metodologia de Engenharia de Receita.
                                 </p>
                                 <button className="w-full bg-neon text-background font-black uppercase text-xs tracking-[0.2em] py-6 rounded-2xl hover:scale-[1.02] transition-transform active:scale-[0.98] shadow-lg shadow-neon/20">

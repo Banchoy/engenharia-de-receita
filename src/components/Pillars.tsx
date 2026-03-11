@@ -20,40 +20,41 @@ const pillars = [
     {
         icon: TrendingUp,
         title: "Escala Lucrativa",
-        description: "Transformamos o seu marketing em um centro de lucro previsível. Ajustamos cada métrica para permitir que o investimento cresça de forma sustentável, mantendo margens saudáveis e ROI constante."
+        description: "Transformamos o seu marketing em um centro de lucro previsível. Ajustamos cada métrica para permitir que o investimento cresça de forma sustentável."
     }
 ];
 
 export default function Pillars() {
     return (
         <section id="pillars" className="w-full py-32 px-6 bg-background relative overflow-hidden flex flex-col items-center">
-            {/* Accents - High end subtle gradients */}
+            {/* Accents - Subtle high-end touch */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon/10 rounded-full blur-[200px] opacity-5 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-neon/5 rounded-full blur-[150px] opacity-5 pointer-events-none" />
 
-            <div className="w-full max-w-5xl relative z-10 flex flex-col items-center">
-                <div className="text-center mb-40 space-y-10 w-full flex flex-col items-center">
-                    <h2 className="text-4xl md:text-7xl font-heading font-black leading-none text-white">
+            <div className="w-full max-w-6xl relative z-10 flex flex-col items-center">
+                <div className="text-center mb-20 space-y-6 w-full flex flex-col items-center">
+                    <h2 className="text-4xl md:text-7xl font-heading font-black leading-none text-white uppercase tracking-tighter">
                         A CIÊNCIA DA <br /><span className="text-neon neon-text">ENGENHARIA</span>
                     </h2>
-                    <p className="text-zinc-500 max-w-3xl mx-auto text-lg md:text-2xl font-medium leading-relaxed">
+                    <p className="text-[#E5E7EB] max-w-3xl mx-auto text-lg md:text-xl font-medium leading-[1.6]">
                         Desenvolvemos uma estrutura matemática para garantir que cada centímetro
-                        do seu funil de vendas funcione com a precisão de um relógio suíço, voltado para o lucro máximo.
+                        do seu funil de vendas funcione com a precisão de um relógio suíço.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-20 mb-96 w-full justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-32 w-full">
                     {pillars.map((pillar, index) => (
                         <PillarCard key={index} pillar={pillar} index={index} />
                     ))}
                 </div>
 
-                <div className="flex flex-col items-center gap-12 p-20 rounded-[4rem] glass border-neon/10 text-center shadow-[0_40px_100px_rgba(0,0,0,0.8)] relative group w-full max-w-4xl mx-auto mb-64">
-                    <div className="absolute inset-0 bg-neon/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 rounded-[4rem]" />
-                    <h4 className="text-3xl md:text-5xl font-heading font-black max-w-md mx-auto leading-tight text-white uppercase tracking-tighter relative z-10">
-                        QUER IMPLEMENTAR ISSO HOJE?
-                    </h4>
-                    <WhatsAppButton className="scale-110 relative z-10" />
+                <div className="w-full max-w-4xl mx-auto mb-32">
+                    <div className="flex flex-col items-center gap-10 p-12 md:p-20 rounded-[4rem] glass border-neon/10 text-center shadow-[0_40px_100px_rgba(0,0,0,0.8)] relative group overflow-hidden">
+                        <div className="absolute inset-0 bg-neon/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                        <h4 className="text-3xl md:text-5xl font-heading font-black max-w-md mx-auto leading-tight text-white uppercase tracking-tighter relative z-10">
+                            QUER IMPLEMENTAR ISSO HOJE?
+                        </h4>
+                        <WhatsAppButton className="scale-110 relative z-10" />
+                    </div>
                 </div>
             </div>
         </section>
@@ -68,34 +69,39 @@ function PillarCard({ pillar, index }: { pillar: any; index: number }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="text-center group relative p-14 rounded-[3.5rem] border border-white/5 bg-zinc-950/40 hover:border-neon/30 transition-all duration-700 shadow-2xl hover:shadow-neon/10 flex flex-col items-center min-h-[480px] h-auto w-full"
+            className="group relative p-10 md:p-14 rounded-[3.5rem] border border-white/5 bg-zinc-950/40 hover:border-neon/30 transition-all duration-700 shadow-2xl hover:shadow-neon/10 flex flex-col items-center text-center min-h-[500px] h-auto w-full"
         >
-            <div className="w-24 h-24 bg-neon/10 border border-neon/30 rounded-full flex items-center justify-center mb-10 group-hover:bg-neon group-hover:text-background transition-all duration-500 shadow-[0_0_30px_rgba(222,255,154,0.3)]">
+            <div className="w-24 h-24 bg-neon/10 border border-neon/30 rounded-full flex items-center justify-center mb-10 group-hover:bg-neon group-hover:text-background transition-all duration-500 shrink-0">
                 <pillar.icon className="w-12 h-12" />
             </div>
-            <h3 className="text-2xl font-heading font-black mb-6 text-white uppercase tracking-tighter">{pillar.title}</h3>
 
-            <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="mb-6 px-6 py-2 rounded-full border border-neon/30 text-neon text-[10px] font-black tracking-widest uppercase hover:bg-neon/10 transition-colors"
-            >
-                {isOpen ? "Fechar" : "Saber Detalhes"}
-            </button>
+            <h3 className="text-2xl font-heading font-black mb-8 text-white uppercase tracking-tighter leading-tight shrink-0">
+                {pillar.title}
+            </h3>
 
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden w-full"
-                    >
-                        <p className="text-zinc-400 text-sm leading-relaxed font-medium pt-4 border-t border-neon/10 hyphens-auto">
-                            {pillar.description}
-                        </p>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            <div className="flex-1 flex flex-col items-center w-full">
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="mb-8 px-8 py-3 rounded-full border border-neon/30 text-neon text-[10px] font-black tracking-widest uppercase hover:bg-neon/10 transition-colors shrink-0"
+                >
+                    {isOpen ? "Fechar" : "Saber Detalhes"}
+                </button>
+
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="overflow-hidden w-full"
+                        >
+                            <p className="text-[#E5E7EB]/70 text-sm md:text-base leading-[1.6] font-medium pt-6 border-t border-neon/10 hyphens-auto">
+                                {pillar.description}
+                            </p>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </div>
         </motion.div>
     );
 }

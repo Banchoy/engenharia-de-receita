@@ -15,9 +15,9 @@ export default function CaseStudy() {
                         </h2>
                     </div>
 
-                    <p className="text-zinc-500 text-lg md:text-xl leading-relaxed font-medium max-w-2xl mx-auto hyphens-auto">
+                    <p className="text-[#E5E7EB]/80 text-lg md:text-xl leading-[1.6] font-medium max-w-2xl mx-auto hyphens-auto">
                         Assumimos uma operação que estava queimando caixa em campanhas genéricas e aplicamos nossa engenharia de receita.
-                        Em menos de um trimestre, transformamos a estagnação em uma máquina de vendas High Ticket, atingindo 6 dígitos de lucro líquido sem comprometer o CAC.
+                        Em menos de um trimestre, transformamos a estagnação em uma máquina de vendas High Ticket.
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-10 md:gap-16 pt-4 w-full">

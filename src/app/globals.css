@@ -7,9 +7,14 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: #E5E7EB;
   background: #050505;
   overflow-x: hidden;
+  line-height: 1.6;
+}
+
+p {
+  line-height: 1.6;
 }
 
 @layer components {

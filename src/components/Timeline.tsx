@@ -68,8 +68,8 @@ export default function Timeline() {
                                         </div>
                                         <span className="text-neon font-black text-xs uppercase tracking-widest">{step.day}</span>
                                     </div>
-                                    <h3 className="text-xl md:text-2xl font-heading font-black text-white uppercase tracking-tight mb-4">{step.title}</h3>
-                                    <p className="text-zinc-500 text-sm md:text-base leading-relaxed font-medium">
+                                    <h3 className="text-xl md:text-2xl font-heading font-black text-white uppercase tracking-tight mb-4 leading-tight">{step.title}</h3>
+                                    <p className="text-[#E5E7EB]/70 text-sm md:text-base leading-[1.6] font-medium">
                                         {step.description}
                                     </p>
                                 </motion.div>

@@ -30,7 +30,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="text-zinc-400 text-lg md:text-2xl max-w-2xl mx-auto font-medium leading-relaxed"
+                    className="text-[#E5E7EB]/80 text-lg md:text-2xl max-w-2xl mx-auto font-medium leading-[1.6]"
                 >
                     Pare de depender da sorte. Implemente o sistema de aquisição que transforma cliques em agendamentos de alto ticket com precisão matemática.
                 </motion.p>

@@ -41,7 +41,7 @@ export default function Problem() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-12 mb-40">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-32 w-full">
                     {problems.map((item, index) => (
                         <motion.div
                             key={index}
@@ -51,35 +51,37 @@ export default function Problem() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="p-14 rounded-[3rem] glass border-neon/10 hover:border-neon/40 transition-all duration-500 text-center relative group flex flex-col items-center justify-center min-h-[480px] h-auto cursor-default"
+                            className="p-10 md:p-14 rounded-[3rem] glass border-neon/10 hover:border-neon/40 transition-all duration-500 text-center relative group flex flex-col items-center min-h-[500px] h-auto cursor-default"
                         >
-                            <div className="flex flex-col items-center justify-center space-y-8 w-full">
-                                <div className="p-6 bg-neon/5 rounded-3xl border border-neon/10 group-hover:bg-neon group-hover:text-background transition-all duration-500 shadow-neon/5">
+                            <div className="flex flex-col items-center space-y-10 w-full h-full">
+                                <div className="p-6 bg-red-500/10 rounded-3xl border border-red-500/20 group-hover:bg-red-500 group-hover:text-white transition-all duration-500 shadow-lg shadow-red-500/5 shrink-0">
                                     <item.icon className="w-12 h-12" />
                                 </div>
 
-                                <h3 className="text-2xl font-heading font-black text-white tracking-tight uppercase">
+                                <h3 className="text-2xl font-heading font-black text-white tracking-tight uppercase leading-tight shrink-0">
                                     {item.title}
                                 </h3>
 
-                                <motion.div
-                                    variants={{
-                                        initial: { height: 0, opacity: 0, marginTop: 0 },
-                                        hover: { height: "auto", opacity: 1, marginTop: 24 }
-                                    }}
-                                    className="overflow-hidden hidden md:block w-full"
-                                    transition={{ duration: 0.4, ease: "easeOut" }}
-                                >
-                                    <p className="text-zinc-500 leading-relaxed text-sm font-medium pt-4 border-t border-neon/10">
-                                        {item.description}
-                                    </p>
-                                </motion.div>
+                                <div className="flex-1 flex flex-col items-center w-full">
+                                    <motion.div
+                                        variants={{
+                                            initial: { height: 0, opacity: 0 },
+                                            hover: { height: "auto", opacity: 1 }
+                                        }}
+                                        className="overflow-hidden hidden md:block w-full"
+                                        transition={{ duration: 0.4, ease: "easeOut" }}
+                                    >
+                                        <p className="text-[#E5E7EB]/70 leading-[1.6] text-sm md:text-base font-medium pt-8 border-t border-white/5 hyphens-auto">
+                                            {item.description}
+                                        </p>
+                                    </motion.div>
 
-                                {/* Fallback Mobile (sempre visível ou com toque) */}
-                                <div className="md:hidden">
-                                    <p className="text-zinc-500 leading-relaxed text-sm font-medium pt-4 border-t border-neon/10 hyphens-auto">
-                                        {item.description}
-                                    </p>
+                                    {/* Fallback Mobile (sempre visível) */}
+                                    <div className="md:hidden w-full">
+                                        <p className="text-[#E5E7EB]/70 leading-[1.6] text-sm md:text-base font-medium pt-8 border-t border-white/5 hyphens-auto">
+                                            {item.description}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
