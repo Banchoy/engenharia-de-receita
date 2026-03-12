@@ -26,10 +26,10 @@ const creatives = [
 
 export default function CreativeShowcase() {
     return (
-        <section id="creatives" className="w-full py-32 px-6 flex flex-col items-center bg-zinc-950/20">
+        <section id="creatives" className="w-full py-16 md:py-32 px-6 flex flex-col items-center bg-zinc-950/20">
             <div className="w-full max-w-6xl relative z-10">
-                <div className="text-center mb-24 space-y-6">
-                    <h2 className="text-4xl md:text-7xl font-heading font-black text-white tracking-tighter uppercase">
+                <div className="text-center mb-24 md:mb-32 space-y-6">
+                    <h2 className="text-4xl md:text-7xl font-heading font-black text-white tracking-tighter uppercase text-balance">
                         SHOWCASE DE <span className="text-neon neon-text">CRIATIVOS</span>
                     </h2>
                     <p className="text-zinc-500 max-w-3xl mx-auto text-lg md:text-xl font-medium leading-relaxed">
@@ -38,7 +38,7 @@ export default function CreativeShowcase() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-10">
+                <div className="grid md:grid-cols-3 gap-12">
                     {creatives.map((creative, index) => (
                         <motion.div
                             key={index}
@@ -46,7 +46,7 @@ export default function CreativeShowcase() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative flex flex-col items-center min-h-[450px] h-auto"
+                            className="group relative flex flex-col items-center h-auto"
                         >
                             <div className={`w-full aspect-[4/5] rounded-[3.5rem] bg-gradient-to-br ${creative.color} to-transparent border border-white/5 flex items-center justify-center relative overflow-hidden transition-all duration-700 group-hover:border-neon/30`}>
                                 <div className="absolute inset-0 bg-zinc-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -59,9 +59,9 @@ export default function CreativeShowcase() {
                                 </div>
                             </div>
 
-                            <div className="mt-12 text-center space-y-6 px-6 w-full">
-                                <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-tight">{creative.title}</h3>
-                                <p className="text-[#E5E7EB]/70 text-sm md:text-base font-medium leading-[1.6] max-w-[300px] mx-auto break-words w-full">
+                            <div className="mt-12 text-center space-y-6 px-8 w-full">
+                                <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-tight text-balance">{creative.title}</h3>
+                                <p className="text-[#E5E7EB]/70 text-sm md:text-base font-medium leading-relaxed max-w-[300px] mx-auto break-words w-full">
                                     {creative.description}
                                 </p>
                             </div>
@@ -69,7 +69,7 @@ export default function CreativeShowcase() {
                     ))}
                 </div>
 
-                <div className="mt-32 flex flex-col items-center gap-6">
+                <div className="mt-20 md:mt-32 flex flex-col items-center gap-6">
                     <div className="flex items-center gap-3 text-zinc-600">
                         <ShieldCheck className="w-5 h-5 text-neon" />
                         <span className="text-[10px] font-black uppercase tracking-[0.3em]">Segurança e Replicabilidade Garantidas</span>

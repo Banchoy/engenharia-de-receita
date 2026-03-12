@@ -21,7 +21,7 @@ export default function Hero() {
                         <span className="w-2 h-2 bg-neon rounded-full animate-ping" />
                         Engenharia de Receita Previsível
                     </div>
-                    <h1 className="text-6xl md:text-9xl font-heading font-black leading-[0.85] text-white tracking-tighter uppercase">
+                    <h1 className="text-6xl md:text-9xl font-heading font-black leading-[0.85] text-white tracking-tighter uppercase text-balance">
                         VENDA MAIS <br /> COM <span className="text-neon neon-text drop-shadow-[0_0_40px_rgba(222,255,154,0.4)]">CIÊNCIA</span>
                     </h1>
                 </motion.div>
@@ -30,7 +30,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="text-[#E5E7EB]/80 text-lg md:text-2xl max-w-2xl mx-auto font-medium leading-[1.6]"
+                    className="text-[#E5E7EB]/80 text-lg md:text-2xl max-w-2xl mx-auto font-medium leading-relaxed text-balance"
                 >
                     Pare de depender da sorte. Implemente o sistema de aquisição que transforma cliques em agendamentos de alto ticket com precisão matemática.
                 </motion.p>

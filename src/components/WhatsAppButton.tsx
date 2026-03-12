@@ -86,7 +86,7 @@ export default function WhatsAppButton({ className, variant = "inline" }: WhatsA
             onClick={handleClick}
             disabled={loading}
             className={cn(
-                "group relative overflow-hidden flex items-center justify-center gap-3 px-10 py-5 bg-neon text-background rounded-full font-heading font-black uppercase tracking-widest transition-all duration-500 hover:shadow-neon-strong active:scale-95",
+                "group relative overflow-hidden flex items-center justify-center gap-4 px-12 py-6 bg-neon text-background rounded-full font-heading font-black uppercase tracking-widest transition-all duration-500 hover:shadow-neon-strong shadow-premium active:scale-95",
                 className
             )}
         >

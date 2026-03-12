@@ -7,14 +7,18 @@
 }
 
 body {
+  background-color: #050505;
   color: #E5E7EB;
-  background: #050505;
-  overflow-x: hidden;
   line-height: 1.6;
+  @apply antialiased overflow-x-hidden;
 }
 
 p {
-  line-height: 1.6;
+  @apply leading-relaxed;
+}
+
+.text-balance {
+  text-wrap: balance;
 }
 
 @layer components {
@@ -23,7 +27,7 @@ p {
   }
 
   .neon-text {
-    text-shadow: 0 0 8px rgba(222, 255, 154, 0.6);
+    text-shadow: 0 0 20px rgba(222, 255, 154, 0.3);
   }
 
   .glass {
