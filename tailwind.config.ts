@@ -16,6 +16,9 @@ const config: Config = {
                     glow: "rgba(222, 255, 154, 0.5)",
                 },
                 surface: "#121212",
+                dark: "#050505",
+                card: "#121212",
+                cardHover: "#1a1a1a",
             },
             fontFamily: {
                 sans: ["var(--font-urbanist)", "sans-serif"],
